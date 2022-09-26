@@ -9,7 +9,8 @@ class Animal:
         self._habitat = habitat
         self._genero = genero
         
-    def getTotalAnimales(self):
+    @classmethod
+    def getTotalAnimales(cls):
         return Animal._totalAnimales
     
     
@@ -37,10 +38,11 @@ class Animal:
     def setGenero(self, genero):
         self._genero = genero
       
-        
-    def getZona():
+    @classmethod    
+    def getZona(cls):
         return Animal._zona
     
+    @classmethod
     def setZona(cls, zona):
         cls._zona = zona
         
