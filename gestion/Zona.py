@@ -1,8 +1,7 @@
-from zooAnimales.Animal import Animal
 
 class Zona:
     # Atributos
-    def __init__(self, nombre, zoologico):
+    def __init__(self, nombre=None, zoologico=None):
         self._nombre = nombre
         self._zoologico = zoologico
         self._animales = []

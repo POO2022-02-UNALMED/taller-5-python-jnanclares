@@ -1,4 +1,4 @@
-from Animal import Animal
+from zooAnimales.animal import Animal
 
 class Anfibio (Animal):
     anfibios = 0
@@ -6,11 +6,11 @@ class Anfibio (Animal):
     salamandras = 0
     _listado = []
     
-    def __init__(self, nombre, edad, habitat, genero, colorPiel, venenoso):
+    def __init__(self, nombre=None, edad=None, habitat=None, genero=None, colorPiel=None, venenoso=None):
         super().__init__(nombre, edad, habitat, genero)
         self._colorPiel = colorPiel
         self._venenoso = venenoso
-        Anfibio.salamandras += 1
+        Anfibio.anfibios += 1
         Anfibio._listado.append(self)
         
     
@@ -37,11 +37,11 @@ class Anfibio (Animal):
     def movimiento():
         return "saltar"
     
-    def crearRana(self, nombre, edad, genero):
+    def crearRana(nombre, edad, genero):
         Anfibio.ranas += 1
         return Anfibio(nombre, edad, "selva", genero, "rojo", True)
     
-    def crearSalamandra(self, nombre, edad, genero):
+    def crearSalamandra(nombre, edad, genero):
         Anfibio.salamandras += 1
         return Anfibio(nombre, edad, "selva", genero, "negro y amarillo", False)
         

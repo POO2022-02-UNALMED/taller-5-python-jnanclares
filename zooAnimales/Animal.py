@@ -1,9 +1,4 @@
-from gestion.Zona import Zona
-from Animal import Mamifero
-from Animal import Ave
-from Animal import Reptil
-from Animal import Pez
-from Animal import Anfibio
+from gestion.zona import Zona
 
 class Animal:
     _zona = None
@@ -58,7 +53,19 @@ class Animal:
     
     
     def totalPorTipo():
+        from animal import Mamifero
+        from animal import Ave
+        from animal import Reptil
+        from animal import Pez
+        from animal import Anfibio
+
         return f"Mamiferos: {Mamifero.cantidadMamiferos()}\nAve: {Ave.cantidadAve()}\nReptil: {Reptil.cantidadReptil()}\nPez: {Pez.cantidadPez()}\nAnfibio: {Anfibio.cantidadAnfibio()}" 
     
     def __str__(self):
-        cadena = f"Mi nombre es {Animal.getNombre()}, tengo una edad de {Animal.getEdad()}, habito en {Animal.getHabitat()} y mi genero es {Animal.getGenero()}, la zona en la que me ubico es {Animal.getZona()}, en el {Animal.getZona().getZoologico()}"
+        if Animal.zona != None:
+            cadena = f"Mi nombre es {Animal.getNombre()}, tengo una edad de {Animal.getEdad()}, habito en {Animal.getHabitat()} y mi genero es {Animal.getGenero()}, la zona en la que me ubico es {Animal.getZona()}, en el {Animal.getZona().getZoologico()}"
+            return cadena
+        else:
+            cadena = f"Mi nombre es {Animal.getNombre()}, tengo una edad de {Animal.getEdad()}, habito en {Animal.getHabitat()} y mi genero es {Animal.getGenero()}"
+            return cadena
+            

@@ -1,4 +1,4 @@
-from Animal import Animal
+from zooAnimales.animal import Animal
 
 class Mamifero (Animal):
     mamiferos = 0
@@ -6,7 +6,7 @@ class Mamifero (Animal):
     leones = 0
     _listado = []
     
-    def __init__(self, nombre, edad, habitat, genero, pelaje, patas):
+    def __init__(self, nombre=None, edad=None, habitat=None, genero=None, pelaje=None, patas=None):
         super().__init__(nombre, edad, habitat, genero)
         self._pelaje = pelaje
         self._patas = patas
@@ -33,11 +33,11 @@ class Mamifero (Animal):
     def cantidadMamiferos():
         return Mamifero.mamiferos
     
-    def crearCaballo(self, nombre, edad, genero):
+    def crearCaballo(nombre, edad, genero):
         Mamifero.caballos += 1
         return Mamifero(nombre, edad, "pradera", genero, True, 4)
     
-    def crearLeon(self, nombre, edad, genero):
+    def crearLeon(nombre, edad, genero):
         Mamifero.leones += 1
         return Mamifero(nombre, edad, "selva", genero, True, 4)
         
