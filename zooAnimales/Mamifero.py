@@ -1,48 +1,45 @@
 from zooAnimales.animal import Animal
 
-class Mamifero(Animal):
-    _listado=[]
-    leones=0
-    caballos=0
-    def __init__(self, nombre, edad, habitat, genero, pelaje, patas):
-        super().__init__(nombre,edad,habitat,genero)
-        self._pelaje=pelaje
-        self._patas=patas
-        
-    @classmethod
-    def getListado(cls):
-        return cls._listado  
-
-    @classmethod
-    def setListado(cls, listado):
-        cls._listado=listado
+class Mamifero (Animal):
+    mamiferos = 0
+    caballos = 0
+    leones = 0
+    _listado = []
     
+    def __init__(self, nombre=None, edad=None, habitat=None, genero=None, pelaje=None, patas=None):
+        super().__init__(nombre, edad, habitat, genero)
+        self._pelaje = pelaje
+        self._patas = patas
+        Mamifero.mamiferos += 1
+        Mamifero._listado.append(self)
+        
+    
+    def getListado():
+        return Mamifero._listado
+
     def isPelaje(self):
         return self._pelaje
-
-    def setPelaje(self, pelaje):
-        self._pelaje=pelaje
     
+    def setPelaje(self, pelaje):
+        self._pelaje = pelaje
+        
     def getPatas(self):
         return self._patas
-
+    
     def setPatas(self, patas):
-        self._patas=patas
+        self._patas = patas
+        
     
-    @classmethod
-    def cantidadMamiferos(cls):
-        return len(cls._listado)
-
-    @classmethod
-    def crearCaballo(cls, nombre, edad, genero):
-        caballo= Mamifero(nombre, edad, "selva", genero, True, 4)
-        cls._listado.append(caballo)
-        cls.caballos +=1
-        return caballo
+    def cantidadMamiferos():
+        return Mamifero.mamiferos
     
-    @classmethod
-    def crearLeon(cls, nombre, edad, genero):
-        leon= Mamifero(nombre, edad, "selva", genero, True, 4)
-        cls._listado.append(leon)
-        cls.leones +=1
-        return leon
+    def crearCaballo(nombre, edad, genero):
+        Mamifero.caballos += 1
+        return Mamifero(nombre, edad, "pradera", genero, True, 4)
+    
+    def crearLeon(nombre, edad, genero):
+        Mamifero.leones += 1
+        return Mamifero(nombre, edad, "selva", genero, True, 4)
+        
+        
+    
