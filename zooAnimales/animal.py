@@ -58,7 +58,7 @@ class Animal:
         from zooAnimales.pez  import Pez
         from zooAnimales.anfibio  import Anfibio
 
-        return f"Mamiferos: {Mamifero.cantidadMamiferos()}\nAve: {Ave.cantidadAves()}\nReptil: {Reptil.cantidadReptiles()}\nPez: {Pez.cantidadPeces()}\nAnfibio: {Anfibio.cantidadAnfibios()}"
+        return f"Mamiferos : {Mamifero.cantidadMamiferos()}\nAves : {Ave.cantidadAves()}\nReptiles : {Reptil.cantidadReptiles()}\nPeces : {Pez.cantidadPeces()}\nAnfibios : {Anfibio.cantidadAnfibios()}"
     
     def toString(self):
         cadena = f"Mi nombre es {self.getNombre()}, tengo una edad de {self.getEdad()}, habito en {self.getHabitat()} y mi genero es {self.getGenero()}"
