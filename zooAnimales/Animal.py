@@ -1,5 +1,3 @@
-from gestion.zona import Zona
-
 class Animal:
     _zona = None
     _totalAnimales = 0
@@ -29,7 +27,7 @@ class Animal:
         self._edad = edad
         
     def getHabitat(self):
-        return self._nombre
+        return self._habitat
     
     def setHabitat(self, habitat):
         self._habitat = habitat
@@ -60,9 +58,9 @@ class Animal:
         from zooAnimales.pez  import Pez
         from zooAnimales.anfibio  import Anfibio
 
-        return f"Mamiferos: {Mamifero.cantidadMamiferos()}\nAve: {Ave.cantidadAve()}\nReptil: {Reptil.cantidadReptil()}\nPez: {Pez.cantidadPez()}\nAnfibio: {Anfibio.cantidadAnfibio()}" 
+        return f"Mamiferos: {Mamifero.cantidadMamiferos()}\nAve: {Ave.cantidadAves()}\nReptil: {Reptil.cantidadReptiles()}\nPez: {Pez.cantidadPeces()}\nAnfibio: {Anfibio.cantidadAnfibios()}"
     
     def __str__(self):
-        cadena = f"Mi nombre es {Animal.getNombre()}, tengo una edad de {Animal.getEdad()}, habito en {Animal.getHabitat()} y mi genero es {Animal.getGenero()}"
+        cadena = f"Mi nombre es {self.getNombre()}, tengo una edad de {self.getEdad()}, habito en {self.getHabitat()} y mi genero es {self.getGenero()}"
         return cadena
             
