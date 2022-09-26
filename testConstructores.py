@@ -64,4 +64,10 @@ def testReptil():
     if rep1.getNombre() == "lagartija" and rep1.getEdad() == 1 and rep1.getHabitat() == "casa" and rep1.getGenero() == "F" and rep1.getColorEscamas() == "cafe" and rep1.getLargoCola() == 1:
         ok = True
     assert(ok)
-    
+
+
+zoo1 = Zoologico("Central perk", "Calle Principal")
+zona1 = Zona("salvaje", zoo1)
+zona2 = Zona("salvaje")
+
+print(zona1.getNombre())

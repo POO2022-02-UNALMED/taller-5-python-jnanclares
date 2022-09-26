@@ -1,4 +1,3 @@
-
 class Zona:
     # Atributos
     def __init__(self, nombre=None, zoologico=None):

@@ -61,10 +61,6 @@ class Animal:
         return f"Mamiferos: {Mamifero.cantidadMamiferos()}\nAve: {Ave.cantidadAve()}\nReptil: {Reptil.cantidadReptil()}\nPez: {Pez.cantidadPez()}\nAnfibio: {Anfibio.cantidadAnfibio()}" 
     
     def __str__(self):
-        if Animal.zona != None:
-            cadena = f"Mi nombre es {Animal.getNombre()}, tengo una edad de {Animal.getEdad()}, habito en {Animal.getHabitat()} y mi genero es {Animal.getGenero()}, la zona en la que me ubico es {Animal.getZona()}, en el {Animal.getZona().getZoologico()}"
-            return cadena
-        else:
-            cadena = f"Mi nombre es {Animal.getNombre()}, tengo una edad de {Animal.getEdad()}, habito en {Animal.getHabitat()} y mi genero es {Animal.getGenero()}"
-            return cadena
+        cadena = f"Mi nombre es {Animal.getNombre()}, tengo una edad de {Animal.getEdad()}, habito en {Animal.getHabitat()} y mi genero es {Animal.getGenero()}"
+        return cadena
             
