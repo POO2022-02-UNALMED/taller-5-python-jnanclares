@@ -51,7 +51,6 @@ class Animal:
     
     
     def totalPorTipo():
-        from gestion.zona import Zona
         from zooAnimales.mamifero import Mamifero
         from zooAnimales.ave  import Ave
         from zooAnimales.reptil  import Reptil
