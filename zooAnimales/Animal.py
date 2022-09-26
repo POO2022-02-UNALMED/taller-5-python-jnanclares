@@ -53,11 +53,11 @@ class Animal:
     
     
     def totalPorTipo():
-        from animal import Mamifero
-        from animal import Ave
-        from animal import Reptil
-        from animal import Pez
-        from animal import Anfibio
+        from zooAnimales.mamifero import Mamifero
+        from zooAnimales.ave  import Ave
+        from zooAnimales.reptil  import Reptil
+        from zooAnimales.pez  import Pez
+        from zooAnimales.anfibio  import Anfibio
 
         return f"Mamiferos: {Mamifero.cantidadMamiferos()}\nAve: {Ave.cantidadAve()}\nReptil: {Reptil.cantidadReptil()}\nPez: {Pez.cantidadPez()}\nAnfibio: {Anfibio.cantidadAnfibio()}" 
     
