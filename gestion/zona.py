@@ -12,7 +12,7 @@ class Zona:
     def setNombre(self, nombre):
         self._nombre = nombre
         
-    def getZoologico(self):
+    def getZoo(self):
         return self._zoologico
     
     def setNombre(self, zoologico):

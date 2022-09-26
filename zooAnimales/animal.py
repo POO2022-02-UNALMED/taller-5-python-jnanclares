@@ -60,7 +60,7 @@ class Animal:
 
         return f"Mamiferos: {Mamifero.cantidadMamiferos()}\nAve: {Ave.cantidadAves()}\nReptil: {Reptil.cantidadReptiles()}\nPez: {Pez.cantidadPeces()}\nAnfibio: {Anfibio.cantidadAnfibios()}"
     
-    def __str__(self):
+    def toString(self):
         cadena = f"Mi nombre es {self.getNombre()}, tengo una edad de {self.getEdad()}, habito en {self.getHabitat()} y mi genero es {self.getGenero()}"
         return cadena
             
