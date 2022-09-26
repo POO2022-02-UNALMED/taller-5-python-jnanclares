@@ -1,42 +1,45 @@
 from zooAnimales.animal import Animal
 
-class Ave (Animal):
-    aves = 0
-    halcones = 0
-    aguilas = 0
-    _listado = []
-    
-    def __init__(self, nombre=None, edad=None, habitat=None, genero=None, colorPlumas=None):
+class Ave(Animal):
+    _listado=[]
+    halcones=0
+    aguilas=0
+    def __init__(self, nombre, edad, habitat, genero, colorPlumas):
         super().__init__(nombre, edad, habitat, genero)
-        self._colorPlumas = colorPlumas
-        Ave.aves += 1
-        Ave._listado.append(self)
-        
-    
-    def getListado():
-        return Ave._listado
+        self._colorPlumas=colorPlumas
 
-        
+    @classmethod
+    def getListado(cls):
+        return cls._listado  
+
+    @classmethod
+    def setListado(cls, listado):
+        cls._listado=listado
+
     def getColorPlumas(self):
         return self._colorPlumas
+
+    def setColorPlumas(self, colorPlumas):
+        self._colorPlumas=colorPlumas
+
+    @classmethod
+    def cantidadAves(cls):
+        return len(cls._listado)
     
-    def setcolorPlumas(self, colorPlumas):
-        self._colorPlumas = colorPlumas
-        
-    
-    def cantidadAves():
-        return Ave.aves
-    
-    def movimiento():
+    def movimmiento(self):
         return "volar"
     
-    def crearHalcon(nombre, edad, genero):
-        Ave.halcones += 1
-        return Ave(nombre, edad, "montanas", genero, "cafe glorioso")
+    @classmethod
+    def crearHalcon(cls, nombre, edad, genero):
+        halcon= Ave(nombre, edad, "montanas", genero, "cafe glorioso")
+        cls.halcones +=1
+        cls._listado.append(halcon)
+        return halcon
     
-    def crearAguila(nombre, edad, genero):
-        Ave.aguilas += 1
-        return Ave(nombre, edad, "montanas", genero, "blanco y amarillo")
+    @classmethod
+    def crearAguila(cls, nombre, edad, genero):
+        aguila= Ave(nombre, edad, "montanas", genero, "blanco y amarillo")
+        cls.aguilas +=1
+        cls._listado.append(aguila)
+        return aguila
         
-        
-    
