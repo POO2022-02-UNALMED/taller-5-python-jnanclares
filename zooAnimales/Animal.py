@@ -43,7 +43,6 @@ class Animal:
     def getZona():
         return Animal._zona
     
-    @classmethod
     def setZona(cls, zona):
         cls._zona = zona
         
