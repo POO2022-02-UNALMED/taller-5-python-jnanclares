@@ -65,9 +65,3 @@ def testReptil():
         ok = True
     assert(ok)
 
-
-zoo1 = Zoologico("Central perk", "Calle Principal")
-zona1 = Zona("salvaje", zoo1)
-zona2 = Zona("salvaje")
-
-print(zona1.getNombre())
